@@ -5,19 +5,15 @@ const Header = ({ match }) => {
   const fontColor = '#503c31'
 
   return (
-    <Navbar bg='light' expand='lg'>
+    <Navbar expand='lg' className='nav'>
       <Navbar.Brand href='#home'>
         <Image src={require('./logo.png')}></Image>
-        <h3 className='nav-title'>Julias Wildlife Rehabilitation</h3>
+        <h2 className='nav-title'>Julias Wildlife Rehabilitation</h2>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='mr-auto'></Nav>
-        <Nav className='mr-sm-2'>
-          <Nav.Link href='#home'>About Us</Nav.Link>
-          <Nav.Link href='#link'>Gallery</Nav.Link>
-          <Nav.Link href='#link'>Donations</Nav.Link>
-        </Nav>
+        <div></div>
       </Navbar.Collapse>
     </Navbar>
   )
