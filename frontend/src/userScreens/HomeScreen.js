@@ -1,8 +1,10 @@
 import React from 'react'
 import { Card, Row, Col, Image } from 'react-bootstrap'
 import profilepic from '../images/profilepic.jpg'
+import cookies from 'js-cookies'
 
 const HomeScreen = () => {
+  console.log(cookies.getItem('reviewSubmit'))
   return (
     <div className='content-div'>
       <Row className='content-home'>

@@ -2,18 +2,33 @@ import React from 'react'
 import { Navbar, Image, Nav, Container } from 'react-bootstrap'
 
 const Header = ({ match }) => {
-  const fontColor = '#503c31'
-
   return (
     <Navbar expand='lg' className='nav'>
-      <Navbar.Brand href='#home'>
-        <Image src={require('./logo.png')}></Image>
+      <Navbar.Brand href='/'>
+        <Image className='header-img' src={require('./logo.png')}></Image>
+
         <h2 className='nav-title'>Julias Wildlife Rehabilitation</h2>
+        <h2 className='nav-title-mobile'>Julias Wildlife Rehab</h2>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls='basic-navbar-nav' />
-      <Navbar.Collapse id='basic-navbar-nav'>
+
+      <Navbar.Toggle aria-controls='basic-navbar-nav' variant='dark' />
+      <Navbar.Collapse id='basic-navbar-nav' style={{ color: 'white' }}>
         <Nav className='mr-auto'></Nav>
-        <div></div>
+        <Nav style={{ textAlign: 'left' }}>
+          <Nav.Link href='/gallery'>
+            <h6 className='nav-links'>
+              <i className='far fa-images'></i> Gallery
+            </h6>
+          </Nav.Link>
+        </Nav>
+        <Nav style={{ textAlign: 'left' }}>
+          <Nav.Link href='/reviews'>
+            <h6 className='nav-links'>
+              <i className='far fa-edit'></i>
+              Reviews
+            </h6>
+          </Nav.Link>
+        </Nav>
       </Navbar.Collapse>
     </Navbar>
   )

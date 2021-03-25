@@ -5,10 +5,8 @@ import colors from 'colors'
 import morgan from 'morgan'
 import connectDB from './config/db.js'
 
-import videoRoutes from './routes/videoRoutes.js'
-import imageRoutes from './routes/imageRoutes.js'
+import reviewRoutes from './routes/reviewRoutes.js'
 import imageUploadRoutes from './routes/imageUploadRoutes.js'
-import userRoutes from './routes/userRoutes.js'
 
 // Init dotenv
 dotenv.config()
@@ -28,10 +26,8 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json())
 
 // Routes
-app.use('/api/videos', videoRoutes)
+app.use('/api/reviews', reviewRoutes)
 app.use('/api/upload', imageUploadRoutes)
-app.use('/api/images', imageRoutes)
-app.use('/api/users', userRoutes)
 
 const __dirname = path.resolve()
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))

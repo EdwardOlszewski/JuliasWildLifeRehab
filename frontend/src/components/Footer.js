@@ -2,6 +2,8 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 const Footer = () => {
+  const color = '#FFFFFF'
+
   return (
     <footer className='footer'>
       <Container>
@@ -11,13 +13,13 @@ const Footer = () => {
               <Col xs={1} sm={1} md={1} lg={1} xl={1}>
                 <a href='http://maps.google.com/?q=Monee, Illinois 60449'>
                   <p className='nav-icon'>
-                    <i class='fas fa-map-marker-alt'></i>
+                    <i className='fas fa-map-marker-alt'></i>
                   </p>
                 </a>
               </Col>
               <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                <p style={{ fontWeight: '600' }}>Address</p>
-                <p style={{ fontWeight: '100', marginTop: '-1rem' }}>
+                <p style={{ color, fontWeight: '600' }}>Address</p>
+                <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
                   Monee, Illinois
                 </p>
               </Col>
@@ -34,8 +36,8 @@ const Footer = () => {
                 </a>
               </Col>
               <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                <p style={{ fontWeight: '600' }}>Phone</p>
-                <p style={{ fontWeight: '100', marginTop: '-1rem' }}>
+                <p style={{ color, fontWeight: '600' }}>Phone</p>
+                <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
                   (224) 388-1409
                 </p>
               </Col>
@@ -52,8 +54,8 @@ const Footer = () => {
                 </a>
               </Col>
               <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                <p style={{ fontWeight: '600' }}>Email</p>
-                <p style={{ fontWeight: '100', marginTop: '-1rem' }}>
+                <p style={{ color, fontWeight: '600' }}>Email</p>
+                <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
                   juliaswildlife@gmail.com
                 </p>
               </Col>
@@ -68,8 +70,8 @@ const Footer = () => {
                 </p>
               </Col>
               <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                <p style={{ fontWeight: '600' }}>Working Days/Hours</p>
-                <p style={{ fontWeight: '100', marginTop: '-1rem' }}>
+                <p style={{ color, fontWeight: '600' }}>Working Days/Hours</p>
+                <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
                   Mon-Sun/ 5am - 12am
                 </p>
               </Col>
