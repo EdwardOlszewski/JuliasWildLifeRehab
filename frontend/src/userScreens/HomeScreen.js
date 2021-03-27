@@ -17,9 +17,31 @@ const HomeScreen = () => {
         <Col sm={12} md={6} lg={7} xl={8}>
           <Card className='profile-cards'>
             <Card.Body>
-              <h5>Hello, &nbsp; I'm Julia Olszewski!</h5>
+              <h5 className='homeTitle'>Hello, &nbsp; I'm Julia Olszewski!</h5>
               <br></br>
-              <h6>About Me: </h6>
+              <h5 className='homeHeading'>About Me: </h5>
+              <p>
+                In 2019 I decided to start my journey in wildlife rehabiliation.
+                I first started by training with the Safe Haven Wildlife
+                Rehablitation Group. It was there that I learned all of the
+                neccasarry skills and what it takes to be a wildlife Rehabber.
+              </p>
+              <br />
+
+              <h5>Mission Statement </h5>
+              <p>
+                Like many other wildlife rehabbers our main goal is to rescue,
+                rehabilitate, and release.
+              </p>
+              <br />
+
+              <h5>What to do with found wildlife?</h5>
+              <p>
+                The first step after finding wildlife that needs help is to keep
+                it warm and safe. Do not feed. Imediatly contact us. If we
+                cannot get to you right away we have the resources to get you
+                the help the animal needs.
+              </p>
             </Card.Body>
           </Card>
         </Col>

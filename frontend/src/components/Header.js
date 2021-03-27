@@ -44,14 +44,20 @@ const Header = ({ match }) => {
               </NavDropdown.Item>
             </NavDropdown>
           )}
-
-          <Nav.Link href='/gallery'>
-            <h6 className='nav-links'>
-              <i className='far fa-images'></i> Gallery
-            </h6>
-          </Nav.Link>
         </Nav>
         <Nav style={{ textAlign: 'left' }}>
+          <Nav.Link href='/'>
+            <h6 className='nav-links'>
+              <i className='fas fa-home'></i>
+              Home
+            </h6>
+          </Nav.Link>
+          <Nav.Link href='/gallery'>
+            <h6 className='nav-links'>
+              <i className='far fa-images'></i>
+              Gallery
+            </h6>
+          </Nav.Link>
           <Nav.Link href='/reviews'>
             <h6 className='nav-links'>
               <i className='far fa-edit'></i>

@@ -13,7 +13,7 @@ import Paginate from '../components/Paginate'
 import Loader from '../components/Loader'
 import StarsBar from '../components/StarBars'
 
-const ReviewsScreen = ({ match }) => {
+const ReviewsScreen = ({ match, history }) => {
   // Assign useDispatch hook to dispatch actions
   const dispatch = useDispatch()
 
@@ -37,16 +37,9 @@ const ReviewsScreen = ({ match }) => {
   const { success: deleteSuccess } = reviewDelete
 
   useEffect(() => {
-    if (!items || createSuccess) {
-      dispatch(listReviews(pageNumber))
-      dispatch(listReviewStars())
-    }
-    if (deleteSuccess) {
-      dispatch({ type: REVIEW_DELETE_RESET })
-      dispatch({ type: REVIEW_LIST_RESET })
-      dispatch({ type: REVIEW_STARS_RESET })
-    }
-  }, [dispatch, createSuccess, pageNumber, deleteSuccess, items])
+    dispatch(listReviews(pageNumber))
+    dispatch(listReviewStars())
+  }, [dispatch, pageNumber, createSuccess])
 
   return (
     <div className='review-div '>

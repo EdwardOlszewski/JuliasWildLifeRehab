@@ -37,11 +37,6 @@ export const createReview = (author, numStars, review) => async (dispatch) => {
       type: REVIEW_CREATE_SUCCESS,
       payload: data,
     })
-    // create a date then set increase it by 24 hours.
-    // create the cookie for review submited and have it expire tomorrow.
-    var expire = new Date()
-    expire.setHours(expire.getHours() + 24)
-    cookies.setItem('reviewSubmit', 'true', { expires: expire })
   } catch (error) {
     const message =
       error.response && error.response.data.message
@@ -135,3 +130,15 @@ export const reviewDelete = (id) => async (dispatch, getState) => {
     })
   }
 }
+
+/*
+
+
+    // create a date then set increase it by 24 hours.
+    // create the cookie for review submited and have it expire tomorrow.
+    var expire = new Date()
+    expire.setHours(expire.getHours() + 24)
+    cookies.setItem('reviewSubmit', 'true', { expires: expire })
+
+
+    */
