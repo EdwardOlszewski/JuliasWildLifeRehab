@@ -59,7 +59,7 @@ const StarBars = ({ reviews }) => {
             style={{ marginTop: '5px' }}
           />
         </Col>
-        <Col xs={1}>{countArray[1]}</Col>
+        <Col xs={1}>{countArray[2]}</Col>
       </Row>
       <Row>
         <Col xs={3}>1 stars</Col>

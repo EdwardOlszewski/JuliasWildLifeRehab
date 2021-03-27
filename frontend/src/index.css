@@ -66,6 +66,15 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 
+.admin-dropdown {
+  color: white;
+  font-size: 110%;
+  margin-top: -2px;
+}
+.dropdown-item:hover {
+  background-color: white;
+  color: black;
+}
 /* --- Home Screen --- */
 .profile-pic {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -130,12 +139,21 @@ body {
   color: #3d673b;
   font-size: 105%;
 }
-
 .review-button:hover {
   background: none;
   border: none;
   color: #3d673b;
   opacity: 80%;
+}
+
+/* --- Review Screen --- */
+.trash-btn {
+  width: 100%;
+  background-color: red;
+}
+.trash-btn:hover {
+  opacity: 80%;
+  background-color: red;
 }
 
 /* --- pageinate buttons ---*/
@@ -164,6 +182,7 @@ body {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
+/* --- Misc --- */
 .progress-bar {
   background-color: #ffff00;
 }

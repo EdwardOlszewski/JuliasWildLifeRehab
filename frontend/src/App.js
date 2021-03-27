@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 // Header
 import Header from './components/Header'
 
+// Admin Screens
+import AdminLoginScreen from './adminScreens/AdminLoginScreen'
+
 // User Screens
 import HomeScreen from './userScreens/HomeScreen'
 import ReviewScreen from './userScreens/ReviewsScreen'
@@ -17,13 +20,15 @@ const App = () => {
       <Header />
       <main>
         <div className='mainContainer'>
-          <Route path='/' component={HomeScreen} exact />
           <Route path='/reviews' component={ReviewScreen} exact />
           <Route
             path='/reviews/page/:pageNumber'
             component={ReviewScreen}
             exact
           />
+          <Route path='/admin' component={AdminLoginScreen} exact />
+
+          <Route path='/' component={HomeScreen} exact />
         </div>
       </main>
       <Footer />

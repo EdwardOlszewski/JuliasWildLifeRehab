@@ -1,8 +1,20 @@
 import React from 'react'
-import { Navbar, Image, Nav } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
+import { Navbar, Image, Nav, NavDropdown } from 'react-bootstrap'
+import { logout } from '../actions/userActions'
 import navImage from './logo.png'
 
 const Header = ({ match }) => {
+  // Assign useDispatch hook to dispatch action
+  const dispatch = useDispatch()
+
+  const userLogin = useSelector((state) => state.userLogin)
+  const { userInfo } = userLogin
+
+  const logoutHandler = () => {
+    dispatch(logout())
+  }
+
   return (
     <Navbar expand='lg' className='nav'>
       <Navbar.Brand href='/'>
@@ -16,6 +28,23 @@ const Header = ({ match }) => {
       <Navbar.Collapse id='basic-navbar-nav' style={{ color: 'white' }}>
         <Nav className='mr-auto'></Nav>
         <Nav style={{ textAlign: 'left' }}>
+          {userInfo && userInfo.isAdmin && (
+            <NavDropdown
+              title={
+                <span className='admin-dropdown' id='nav-dropdown'>
+                  <i className='fas fa-user-cog'></i> Admin
+                </span>
+              }
+            >
+              <NavDropdown.Item
+                className='dropdown-item'
+                onClick={logoutHandler}
+              >
+                Logout
+              </NavDropdown.Item>
+            </NavDropdown>
+          )}
+
           <Nav.Link href='/gallery'>
             <h6 className='nav-links'>
               <i className='far fa-images'></i> Gallery

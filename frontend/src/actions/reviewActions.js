@@ -9,6 +9,9 @@ import {
   REVIEW_STARS_REQUEST,
   REVIEW_STARS_SUCCESS,
   REVIEW_STARS_FAIL,
+  REVIEW_DELETE_REQUEST,
+  REVIEW_DELETE_SUCCESS,
+  REVIEW_DELETE_FAIL,
 } from '../constants/reviewConstants'
 import cookies from 'js-cookies'
 
@@ -38,7 +41,6 @@ export const createReview = (author, numStars, review) => async (dispatch) => {
     // create the cookie for review submited and have it expire tomorrow.
     var expire = new Date()
     expire.setHours(expire.getHours() + 24)
-    console.log(expire)
     cookies.setItem('reviewSubmit', 'true', { expires: expire })
   } catch (error) {
     const message =
@@ -95,6 +97,40 @@ export const listReviewStars = () => async (dispatch) => {
         : error.message
     dispatch({
       type: REVIEW_STARS_FAIL,
+      payload: message,
+    })
+  }
+}
+
+export const reviewDelete = (id) => async (dispatch, getState) => {
+  try {
+    dispatch({
+      type: REVIEW_DELETE_REQUEST,
+    })
+
+    const {
+      userLogin: { userInfo },
+    } = getState()
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    }
+
+    const { data } = await axios.delete(`/api/reviews/${id}`, config)
+
+    dispatch({
+      type: REVIEW_DELETE_SUCCESS,
+      payload: data,
+    })
+  } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message
+    dispatch({
+      type: REVIEW_DELETE_FAIL,
       payload: message,
     })
   }

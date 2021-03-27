@@ -50,4 +50,19 @@ const getReviewStars = asyncHandler(async (req, res) => {
   res.json({ reviews })
 })
 
-export { createReview, getReviews, getReviewStars }
+// @desc    Delete a review
+// @route   DELETE /api/reviews/:id
+// @access  Private/Admin
+const deleteReview = asyncHandler(async (req, res) => {
+  const review = await Review.findById(req.params.id)
+
+  if (review) {
+    await review.remove()
+    res.json({ message: 'Review removed' })
+  } else {
+    res.status(404)
+    throw new Error('Review not found')
+  }
+})
+
+export { createReview, getReviews, getReviewStars, deleteReview }
