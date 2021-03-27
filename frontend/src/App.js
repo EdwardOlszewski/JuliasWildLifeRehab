@@ -19,6 +19,11 @@ const App = () => {
         <div className='mainContainer'>
           <Route path='/' component={HomeScreen} exact />
           <Route path='/reviews' component={ReviewScreen} exact />
+          <Route
+            path='/reviews/page/:pageNumber'
+            component={ReviewScreen}
+            exact
+          />
         </div>
       </main>
       <Footer />

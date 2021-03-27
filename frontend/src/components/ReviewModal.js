@@ -4,10 +4,13 @@ import { Modal, Button, Form } from 'react-bootstrap'
 import { createReview } from '../actions/reviewActions'
 import { REVIEW_CREATE_RESET } from '../constants/reviewConstants'
 import Loader from '../components/Loader'
+import cookies from 'js-cookies'
 
 const ReviewModal = ({ history }) => {
   // Assign useDispatch hook to dispatch actions
   const dispatch = useDispatch()
+
+  const reviewSubmit = cookies.getItem('reviewSubmit')
 
   const [author, setAuthor] = useState('')
   const [numStars, setNumStars] = useState(0)
@@ -35,9 +38,13 @@ const ReviewModal = ({ history }) => {
 
   return (
     <div style={{ marginTop: '1rem' }}>
-      <Button className='review-button' onClick={handleShow}>
-        Create Review {'>'}
-      </Button>
+      {reviewSubmit ? (
+        <p className='review-button'>Review Submited</p>
+      ) : (
+        <Button className='review-button' onClick={handleShow}>
+          Create Review {'>'}
+        </Button>
+      )}
 
       <Modal
         className='review-modal'

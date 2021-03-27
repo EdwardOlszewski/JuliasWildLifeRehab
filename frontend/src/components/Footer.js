@@ -46,7 +46,7 @@ const Footer = () => {
 
           <Col xs={6} sm={6} md={6} lg={6} xl={3}>
             <Row>
-              <Col xl={1} xs={1} sm={1} md={1} lg={1} xl={1}>
+              <Col xs={1} sm={1} md={1} lg={1} xl={1}>
                 <a href='mailto:sportsandsneakers2021@gmail.com'>
                   <p className='nav-icon'>
                     <i className='fas fa-envelope'></i>

@@ -128,12 +128,33 @@ body {
   background: none;
   border: none;
   color: #3d673b;
+  font-size: 105%;
 }
+
 .review-button:hover {
   background: none;
   border: none;
   color: #3d673b;
   opacity: 80%;
+}
+
+/* --- pageinate buttons ---*/
+.page-link {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  border-color: #979797 !important;
+  border: solid;
+  border-width: 1px;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #3d673b !important;
+  color: #f8f8f8 !important;
+}
+.page-item.active .page-link:hover {
+  cursor: pointer;
 }
 
 /* --- Footer --- */

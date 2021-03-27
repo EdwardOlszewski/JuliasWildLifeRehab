@@ -5,16 +5,14 @@ import thunk from 'redux-thunk'
 import {
   createReviewReducer,
   listReviewReducer,
+  listReviewStarsReducer,
 } from './reducers/reviewReducers'
 
 const reducer = combineReducers({
   reviewCreate: createReviewReducer,
   reviewList: listReviewReducer,
+  reviewStars: listReviewStarsReducer,
 })
-
-const userInfoFromStorage = localStorage.getItem('userInfo')
-  ? JSON.parse(localStorage.getItem('userInfo'))
-  : null
 
 const middleware = [thunk]
 

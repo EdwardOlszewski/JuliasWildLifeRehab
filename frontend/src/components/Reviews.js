@@ -7,7 +7,7 @@ const Reviews = ({ reviews }) => {
   return (
     <ListGroup variant='flush' style={{ textAlign: 'left' }}>
       {reviews.map((review) => (
-        <ListGroup.Item key={review.author}>
+        <ListGroup.Item key={review._id}>
           <Stars value={review.numStars} />
           <p>{review.review}</p>
 

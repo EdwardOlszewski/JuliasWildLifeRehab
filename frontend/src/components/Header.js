@@ -1,11 +1,12 @@
 import React from 'react'
-import { Navbar, Image, Nav, Container } from 'react-bootstrap'
+import { Navbar, Image, Nav } from 'react-bootstrap'
+import navImage from './logo.png'
 
 const Header = ({ match }) => {
   return (
     <Navbar expand='lg' className='nav'>
       <Navbar.Brand href='/'>
-        <Image className='header-img' src={require('./logo.png')}></Image>
+        <Image className='header-img' src={navImage}></Image>
 
         <h2 className='nav-title'>Julias Wildlife Rehabilitation</h2>
         <h2 className='nav-title-mobile'>Julias Wildlife Rehab</h2>

@@ -6,6 +6,9 @@ import {
   REVIEW_LIST_REQUEST,
   REVIEW_LIST_SUCCESS,
   REVIEW_LIST_FAIL,
+  REVIEW_STARS_REQUEST,
+  REVIEW_STARS_SUCCESS,
+  REVIEW_STARS_FAIL,
 } from '../constants/reviewConstants'
 import cookies from 'js-cookies'
 
@@ -49,13 +52,13 @@ export const createReview = (author, numStars, review) => async (dispatch) => {
   }
 }
 
-export const listReviews = () => async (dispatch) => {
+export const listReviews = (pageNumber = '') => async (dispatch) => {
   try {
     dispatch({
       type: REVIEW_LIST_REQUEST,
     })
 
-    const { data } = await axios.get('/api/reviews')
+    const { data } = await axios.get(`/api/reviews?pageNumber=${pageNumber}`)
 
     dispatch({
       type: REVIEW_LIST_SUCCESS,
@@ -68,6 +71,30 @@ export const listReviews = () => async (dispatch) => {
         : error.message
     dispatch({
       type: REVIEW_LIST_FAIL,
+      payload: message,
+    })
+  }
+}
+
+export const listReviewStars = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: REVIEW_STARS_REQUEST,
+    })
+
+    const { data } = await axios.get('/api/reviews/stars')
+
+    dispatch({
+      type: REVIEW_STARS_SUCCESS,
+      payload: data,
+    })
+  } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message
+    dispatch({
+      type: REVIEW_STARS_FAIL,
       payload: message,
     })
   }

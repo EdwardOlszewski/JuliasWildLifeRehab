@@ -1,5 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { Card, ProgressBar, Row, Col } from 'react-bootstrap'
 
 const StarBars = ({ reviews }) => {

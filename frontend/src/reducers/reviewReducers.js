@@ -6,6 +6,9 @@ import {
   REVIEW_LIST_REQUEST,
   REVIEW_LIST_SUCCESS,
   REVIEW_LIST_FAIL,
+  REVIEW_STARS_REQUEST,
+  REVIEW_STARS_SUCCESS,
+  REVIEW_STARS_FAIL,
 } from '../constants/reviewConstants'
 
 export const createReviewReducer = (state = {}, action) => {
@@ -28,8 +31,33 @@ export const listReviewReducer = (state = {}, action) => {
     case REVIEW_LIST_REQUEST:
       return { loading: true, success: false }
     case REVIEW_LIST_SUCCESS:
-      return { success: true, loading: false, items: action.payload }
+      return {
+        success: true,
+        loading: false,
+        items: action.payload,
+        pages: action.payload.pages,
+        page: action.payload.page,
+      }
     case REVIEW_LIST_FAIL:
+      return { loading: false, error: action.payload }
+    default:
+      return state
+  }
+}
+
+export const listReviewStarsReducer = (state = {}, action) => {
+  switch (action.type) {
+    case REVIEW_STARS_REQUEST:
+      return { loading: true, success: false }
+    case REVIEW_STARS_SUCCESS:
+      return {
+        success: true,
+        loading: false,
+        items: action.payload,
+        pages: action.payload.pages,
+        page: action.payload.page,
+      }
+    case REVIEW_STARS_FAIL:
       return { loading: false, error: action.payload }
     default:
       return state
