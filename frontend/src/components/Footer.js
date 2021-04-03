@@ -45,7 +45,7 @@ const Footer = () => {
 
           <Col xs={6} sm={6} md={6} lg={6} xl={3}>
             <div className='icon-div'>
-              <a href='mailto:juliaswildliferehab@gmail.com'>
+              <a href='mailto:juliasrehab@gmail.com'>
                 <p className='nav-icon'>
                   <i className='fas fa-envelope' />
                 </p>
@@ -55,7 +55,7 @@ const Footer = () => {
             <div className='text-div'>
               <p style={{ color, fontWeight: '600' }}>Email</p>
               <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
-                juliaswildlife@gmail.com
+                juliasrehab@gmail.com
               </p>
             </div>
           </Col>
@@ -68,9 +68,9 @@ const Footer = () => {
               <p className='nav-icon-space'>s</p>
             </div>
             <div className='text-div'>
-              <p style={{ color, fontWeight: '600' }}>Working Days/Hours</p>
+              <p style={{ color, fontWeight: '600' }}>Avaliability</p>
               <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
-                Mon-Sun/ 5am - 12am
+                5am - 12am
               </p>
             </div>
           </Col>

@@ -94,7 +94,7 @@ const ReviewModal = ({ history }) => {
 
                 <Form.Group controlId='review'>
                   <Form.Label>
-                    <h6>Review</h6>
+                    <h5>Review</h5>
                   </Form.Label>
                   <textarea
                     className='form-control'

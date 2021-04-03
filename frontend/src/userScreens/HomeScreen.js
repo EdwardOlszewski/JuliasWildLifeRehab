@@ -80,21 +80,21 @@ const HomeScreen = () => {
               <Row className='donations'>
                 <Col xs={4} sm={4} md={4} lg={4} xl={4}>
                   <a href='https://www.amazon.com/hz/wishlist/ls/1NE09Z79KDBZL?ref_=wl_share&fbclid=IwAR2JXTTI1_Z-MoRupCS6ayu_1mPf300NR34tAr735cGdwdjV6sVbl-xwFsM'>
-                    <h1 className='donation-icons' style={{ color: '#ff9400' }}>
+                    <h1 className='donation-amazon'>
                       <i className='fab fa-amazon'></i>
                     </h1>
                   </a>
                 </Col>
                 <Col xs={4} sm={4} md={4} lg={4} xl={4}>
                   <a href='https://www.facebook.com/groups/832540737321242/'>
-                    <h1 className='donation-icons' style={{ color: '#4268b3' }}>
+                    <h1 className='donation-facebook'>
                       <i className='fab fa-facebook-square'></i>
                     </h1>
                   </a>
                 </Col>
                 <Col xs={4} sm={4} md={4} lg={4} xl={4}>
                   <a href='https://www.paypal.com/us/home'>
-                    <h1 className='donation-icons' style={{ color: '#0070ba' }}>
+                    <h1 className='donation-paypal'>
                       <i className='fab fa-cc-paypal'></i>
                     </h1>
                   </a>

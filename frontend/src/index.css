@@ -53,7 +53,7 @@ body {
   margin-right: 0.5rem;
 }
 .nav-links:hover {
-  opacity: 80%;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .nav-icon {
@@ -61,7 +61,7 @@ body {
   font-size: 130%;
 }
 .nav-icon:hover {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .admin-dropdown {
@@ -100,8 +100,24 @@ body {
   color: #eb6534;
 }
 
-.donation-icons:hover {
-  opacity: 70%;
+.donation-paypal {
+  color: #0070ba;
+}
+.donation-paypal:hover {
+  color: #0070ba90;
+}
+.donation-facebook {
+  color: #4268b3;
+}
+.donation-facebook:hover {
+  color: #4268b390;
+}
+
+.donation-amazon {
+  color: #ff9500;
+}
+.donation-amazon:hover {
+  color: #ff950090;
 }
 
 /* --- About Screen --- */
@@ -145,8 +161,7 @@ body {
 .review-button:hover {
   background: none;
   border: none;
-  color: #3d673b;
-  opacity: 80%;
+  color: #3d673b80;
 }
 
 /* --- Review Screen --- */
@@ -155,8 +170,7 @@ body {
   background-color: red;
 }
 .trash-btn:hover {
-  opacity: 80%;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.8);
 }
 
 /* --- pageinate buttons ---*/
@@ -187,12 +201,12 @@ body {
 .icon-div {
   display: inline-block;
   text-align: left;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 .text-div {
   display: inline-block;
   text-align: left;
-  width: 150px;
+  width: 50%;
 }
 .nav-icon-space {
   font-size: 0%;
