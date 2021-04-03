@@ -7,8 +7,10 @@ const Footer = () => {
   return (
     <footer className='footer'>
       <Container style={{ textAlign: 'center', margin: 'auto' }}>
-        <Row style={{ paddingTop: '1rem' }}>
-          <Col xs={6} sm={6} md={6} lg={6} xl={3}>
+        <Row
+          style={{ paddingTop: '1rem', textAlign: 'center', margin: 'auto' }}
+        >
+          <Col xs={6} sm={6} md={6} lg={3} xl={3}>
             <div className='icon-div'>
               <a href='https://goo.gl/maps/hHZKnv3psC12brmC6'>
                 <p className='nav-icon'>
@@ -19,14 +21,16 @@ const Footer = () => {
               <p></p>
             </div>
             <div className='text-div'>
-              <p style={{ color, fontWeight: '600' }}>Address</p>
-              <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
-                Monee, Illinois
-              </p>
+              <div className='footer-text'>
+                <p style={{ color, fontWeight: '600' }}>Address</p>
+                <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
+                  Monee, Illinois
+                </p>
+              </div>
             </div>
           </Col>
 
-          <Col xs={6} sm={6} md={6} lg={6} xl={3}>
+          <Col xs={6} sm={6} md={6} lg={3} xl={3}>
             <div className='icon-div'>
               <a href='callto:12243881409'>
                 <p className='nav-icon'>
@@ -36,16 +40,18 @@ const Footer = () => {
               </a>
             </div>
             <div className='text-div'>
-              <p style={{ color, fontWeight: '600' }}>Phone</p>
-              <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
-                (224) 388-1409
-              </p>
+              <div className='footer-text'>
+                <p style={{ color, fontWeight: '600' }}>Phone</p>
+                <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
+                  (224) 388-1409
+                </p>
+              </div>
             </div>
           </Col>
 
-          <Col xs={6} sm={6} md={6} lg={6} xl={3}>
+          <Col xs={6} sm={6} md={6} lg={3} xl={3}>
             <div className='icon-div'>
-              <a href='mailto:juliasrehab@gmail.com'>
+              <a href='mailto:juliaswildliferehab@gmail.com'>
                 <p className='nav-icon'>
                   <i className='fas fa-envelope' />
                 </p>
@@ -53,14 +59,16 @@ const Footer = () => {
               </a>
             </div>
             <div className='text-div'>
-              <p style={{ color, fontWeight: '600' }}>Email</p>
-              <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
-                juliasrehab@gmail.com
-              </p>
+              <div className='footer-text'>
+                <p style={{ color, fontWeight: '600' }}>Email</p>
+                <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
+                  JuliasWildlifeRehab
+                </p>
+              </div>
             </div>
           </Col>
 
-          <Col xs={6} sm={6} md={6} lg={6} xl={3}>
+          <Col xs={6} sm={6} md={6} lg={3} xl={3}>
             <div className='icon-div'>
               <p className='nav-icon'>
                 <i className='fas fa-clock' />

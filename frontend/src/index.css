@@ -8,7 +8,7 @@ body {
   background-image: url('./images/background.png');
 }
 .content-div {
-  padding-top: 2rem;
+  padding-top: 1rem;
   width: 70%;
   text-align: center;
   margin: auto;
