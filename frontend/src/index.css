@@ -241,6 +241,10 @@ body {
   .review-div {
     width: 90%;
   }
+  .header-img {
+    width: 25%;
+    margin-left: -18px;
+  }
 }
 @media (max-width: 1500px) {
   .donations {
