@@ -73,6 +73,7 @@ body {
   background-color: white;
   color: black;
 }
+
 /* --- Home Screen --- */
 .profile-pic {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -146,6 +147,9 @@ body {
   padding-top: 3rem;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
+.line {
+  display: none;
+}
 
 /* --- Review Modal --- */
 .review-modal {
@@ -207,7 +211,6 @@ body {
   display: inline-block;
   text-align: left;
   width: 80%;
-  background-color: red;
 }
 .nav-icon-space {
   font-size: 0%;
@@ -245,6 +248,14 @@ body {
   .header-img {
     width: 25%;
     margin-left: -18px;
+  }
+  .line {
+    display: block;
+    background-color: rgba(189, 189, 189, 0.5);
+    height: 1px;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 1500px) {
