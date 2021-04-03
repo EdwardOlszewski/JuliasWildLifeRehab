@@ -220,10 +220,10 @@ body {
 
 @media (max-width: 900px) {
   .donations {
-    width: 100%;
+    width: 80%;
   }
   .content-div {
-    width: 80%;
+    width: 90%;
   }
   .nav-title {
     font-size: 1.5rem;
@@ -236,11 +236,15 @@ body {
     display: inline-block;
     color: rgb(255, 255, 255);
     font-family: 'Marck Script', cursive;
-    font-size: 150%;
+    font-size: 130%;
+  }
+  .review-div {
+    width: 90%;
   }
 }
 @media (max-width: 1500px) {
   .donations {
-    width: 70%;
+    width: 80%;
+    background-color: red;
   }
 }
