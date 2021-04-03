@@ -6,76 +6,73 @@ const Footer = () => {
 
   return (
     <footer className='footer'>
-      <Container>
+      <Container style={{ textAlign: 'center', margin: 'auto' }}>
         <Row style={{ paddingTop: '1rem' }}>
           <Col xs={6} sm={6} md={6} lg={6} xl={3}>
-            <Row>
-              <Col xs={1} sm={1} md={1} lg={1} xl={1}>
-                <a href='http://maps.google.com/?q=Monee, Illinois 60449'>
-                  <p className='nav-icon'>
-                    <i className='fas fa-map-marker-alt'></i>
-                  </p>
-                </a>
-              </Col>
-              <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                <p style={{ color, fontWeight: '600' }}>Address</p>
-                <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
-                  Monee, Illinois
-                </p>
-              </Col>
-            </Row>
-          </Col>
-
-          <Col xs={6} sm={6} md={6} lg={6} xl={3}>
-            <Row className='footer-contact'>
-              <Col xs={1} sm={1} md={1} lg={1} xl={1}>
-                <a href='callto:17089048915'>
-                  <p className='nav-icon'>
-                    <i className='fas fa-phone'></i>
-                  </p>
-                </a>
-              </Col>
-              <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                <p style={{ color, fontWeight: '600' }}>Phone</p>
-                <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
-                  (224) 388-1409
-                </p>
-              </Col>
-            </Row>
-          </Col>
-
-          <Col xs={6} sm={6} md={6} lg={6} xl={3}>
-            <Row>
-              <Col xs={1} sm={1} md={1} lg={1} xl={1}>
-                <a href='mailto:sportsandsneakers2021@gmail.com'>
-                  <p className='nav-icon'>
-                    <i className='fas fa-envelope'></i>
-                  </p>
-                </a>
-              </Col>
-              <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                <p style={{ color, fontWeight: '600' }}>Email</p>
-                <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
-                  juliaswildlife@gmail.com
-                </p>
-              </Col>
-            </Row>
-          </Col>
-
-          <Col xs={6} sm={6} md={6} lg={6} xl={3}>
-            <Row>
-              <Col xs={1} sm={1} md={1} lg={1} xl={1}>
+            <div className='icon-div'>
+              <a href='https://goo.gl/maps/hHZKnv3psC12brmC6'>
                 <p className='nav-icon'>
-                  <i className='fas fa-clock'></i>
+                  <i className='fas fa-map-marker-alt' />
                 </p>
-              </Col>
-              <Col xs={10} sm={10} md={10} lg={10} xl={10}>
-                <p style={{ color, fontWeight: '600' }}>Working Days/Hours</p>
-                <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
-                  Mon-Sun/ 5am - 12am
+                <p className='nav-icon-space'>s</p>
+              </a>
+              <p></p>
+            </div>
+            <div className='text-div'>
+              <p style={{ color, fontWeight: '600' }}>Address</p>
+              <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
+                Monee, Illinois
+              </p>
+            </div>
+          </Col>
+
+          <Col xs={6} sm={6} md={6} lg={6} xl={3}>
+            <div className='icon-div'>
+              <a href='callto:12243881409'>
+                <p className='nav-icon'>
+                  <i className='fas fa-phone' />
                 </p>
-              </Col>
-            </Row>
+                <p className='nav-icon-space'>s</p>
+              </a>
+            </div>
+            <div className='text-div'>
+              <p style={{ color, fontWeight: '600' }}>Phone</p>
+              <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
+                (224) 388-1409
+              </p>
+            </div>
+          </Col>
+
+          <Col xs={6} sm={6} md={6} lg={6} xl={3}>
+            <div className='icon-div'>
+              <a href='mailto:juliaswildliferehab@gmail.com'>
+                <p className='nav-icon'>
+                  <i className='fas fa-envelope' />
+                </p>
+                <p className='nav-icon-space'>s</p>
+              </a>
+            </div>
+            <div className='text-div'>
+              <p style={{ color, fontWeight: '600' }}>Email</p>
+              <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
+                juliaswildlife@gmail.com
+              </p>
+            </div>
+          </Col>
+
+          <Col xs={6} sm={6} md={6} lg={6} xl={3}>
+            <div className='icon-div'>
+              <p className='nav-icon'>
+                <i className='fas fa-clock' />
+              </p>
+              <p className='nav-icon-space'>s</p>
+            </div>
+            <div className='text-div'>
+              <p style={{ color, fontWeight: '600' }}>Working Days/Hours</p>
+              <p style={{ color, fontWeight: '100', marginTop: '-1rem' }}>
+                Mon-Sun/ 5am - 12am
+              </p>
+            </div>
           </Col>
         </Row>
 

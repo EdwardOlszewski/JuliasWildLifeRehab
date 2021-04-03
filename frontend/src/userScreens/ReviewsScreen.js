@@ -37,9 +37,19 @@ const ReviewsScreen = ({ match, history }) => {
   const { success: deleteSuccess } = reviewDelete
 
   useEffect(() => {
-    dispatch(listReviews(pageNumber))
-    dispatch(listReviewStars())
-  }, [dispatch, pageNumber, createSuccess])
+    if (deleteSuccess || createSuccess) {
+      dispatch({ type: REVIEW_DELETE_RESET })
+      dispatch({ type: REVIEW_LIST_RESET })
+      dispatch({ type: REVIEW_STARS_RESET })
+    } else {
+      if (!items) {
+        dispatch(listReviews(pageNumber))
+      }
+      if (!numStarsList) {
+        dispatch(listReviewStars())
+      }
+    }
+  }, [dispatch, pageNumber, deleteSuccess, history, createSuccess])
 
   return (
     <div className='review-div '>

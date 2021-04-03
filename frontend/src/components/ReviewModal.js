@@ -39,7 +39,7 @@ const ReviewModal = ({ history }) => {
   return (
     <div style={{ marginTop: '1rem' }}>
       {reviewSubmit ? (
-        <p className='review-button'>Review Submited</p>
+        <p className='review-button'>One review per day, thank you!</p>
       ) : (
         <Button className='review-button' onClick={handleShow}>
           Create Review {'>'}

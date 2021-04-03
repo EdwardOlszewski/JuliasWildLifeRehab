@@ -59,8 +59,6 @@ body {
 .nav-icon {
   color: white;
   font-size: 130%;
-  display: inline-block;
-  margin-top: 0.2rem;
 }
 .nav-icon:hover {
   color: rgba(255, 255, 255, 0.75);
@@ -185,6 +183,20 @@ body {
   background-color: #3d673b;
   margin-top: 3rem;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+}
+.icon-div {
+  display: inline-block;
+  text-align: left;
+  margin-right: 10px;
+}
+.text-div {
+  display: inline-block;
+  text-align: left;
+  width: 150px;
+}
+.nav-icon-space {
+  font-size: 0%;
+  margin-top: -12px;
 }
 
 /* --- Misc --- */

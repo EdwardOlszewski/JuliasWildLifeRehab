@@ -52,12 +52,7 @@ const Header = ({ match }) => {
               Home
             </h6>
           </Nav.Link>
-          <Nav.Link href='/gallery'>
-            <h6 className='nav-links'>
-              <i className='far fa-images'></i>
-              Gallery
-            </h6>
-          </Nav.Link>
+
           <Nav.Link href='/reviews'>
             <h6 className='nav-links'>
               <i className='far fa-edit'></i>
