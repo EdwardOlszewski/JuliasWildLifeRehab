@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Modal, Button, Form, ListGroup } from 'react-bootstrap'
+import { Modal, Button, Form } from 'react-bootstrap'
 import { createReview } from '../actions/reviewActions'
 import { REVIEW_CREATE_RESET } from '../constants/reviewConstants'
 import Loader from '../components/Loader'
