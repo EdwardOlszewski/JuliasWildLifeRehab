@@ -16,11 +16,11 @@ const HomeScreen = () => {
               <h5 className='homeHeading'>About Me: </h5>
               <p>
                 In 2019 I decided to start my journey as a wildlife rehabber. I
-                found out about wildlife rehabbing through the awesome
-                organization The Safe Haven Wildlife Rehabilitation group. It
-                was there I learned the necessary skills and what it takes to
-                become a wildlife rehabber. In 2020 I was able to get my license
-                and become an official licensed wildlife rehabber.
+                found out about wildlife rehabbing through Helen Svetlecich from
+                the Safe Haven Wildlife Rehabilitation group. It was there I
+                learned the necessary skills and what it takes to become a
+                wildlife rehabber. In 2020 I was able to get my license and
+                become an official licensed wildlife rehabber.
               </p>
               <br />
 
