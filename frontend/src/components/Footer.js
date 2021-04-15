@@ -12,7 +12,7 @@ const Footer = () => {
         >
           <Col xs={6} sm={6} md={6} lg={3} xl={3}>
             <div className='icon-div'>
-              <a href='https://goo.gl/maps/hHZKnv3psC12brmC6'>
+              <a href='https://goo.gl/maps/LKmmRzCGJX7Xqq2D7'>
                 <p className='nav-icon'>
                   <i className='fas fa-map-marker-alt' />
                 </p>
